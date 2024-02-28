@@ -3,34 +3,31 @@ import { Col, Container, Row, Tab } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import { ProjectCards } from "../Components/ProjectCards";
 
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
-
-import ra1 from "../assets/img/ra1.jpeg";
-import ra2 from "../assets/img/ra2.jpeg";
-import ra3 from "../assets/img/ra3.jpeg";
+import ra1 from "../assets/img/bb1.PNG";
+import ra2 from "../assets/img/bb2.PNG";
+import ra3 from "../assets/img/bb3.PNG";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Pet Adopt App",
+      title: "Brainbreaker",
+      descripcion: "Design & Development",
+      imgUrl: ra1,
+    },
+    {
+      title: "Brainbreaker",
       descripcion: "Design & Development",
       imgUrl: ra2,
     },
     {
-      title: "Pet Adopt App",
+      title: "brainbreaker",
       descripcion: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Pet Adopt App",
-      descripcion: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: ra3,
     },
   ];
+
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col>
@@ -43,7 +40,7 @@ export const Projects = () => {
                 id="pills-tab"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="first">React</Nav.Link>
+                  <Nav.Link eventKey="first">Brainbreaker</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="second">Laravel</Nav.Link>
@@ -61,7 +58,6 @@ export const Projects = () => {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                  {" "}
                   <Row>
                     {projects.map((project, index) => {
                       return <ProjectCards key={index} {...project} />;
@@ -69,7 +65,6 @@ export const Projects = () => {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
-                  {" "}
                   <Row>
                     {projects.map((project, index) => {
                       return <ProjectCards key={index} {...project} />;

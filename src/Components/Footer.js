@@ -10,9 +10,7 @@ export const Footer = () => {
     <footer className="footer pt-5">
       <Container>
         <Row className="align-items-center">
-          <Col sm={6}>
-            <img src={logo} alt="Logo" />
-          </Col>
+          <Col sm={6}></Col>
           <Col sm={6} className="text-center text-sm-end">
             <div className="social-icon mb-5 mt-5">
               <a href="https://www.linkedin.com/in/josafath-sosa-jimenez-7970b2267/">
