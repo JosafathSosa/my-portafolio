@@ -10,18 +10,18 @@ import ra3 from "../assets/img/bb3.PNG";
 export const Projects = () => {
   const projects = [
     {
-      title: "Brainbreaker",
-      descripcion: "Design & Development",
+      title: "Auth",
+      descripcion: "Sign up & sing in",
       imgUrl: ra1,
     },
     {
-      title: "Brainbreaker",
+      title: "UX Desgin",
       descripcion: "Design & Development",
       imgUrl: ra2,
     },
     {
-      title: "brainbreaker",
-      descripcion: "Design & Development",
+      title: "Ideas",
+      descripcion: "Brings your to life",
       imgUrl: ra3,
     },
   ];
@@ -40,18 +40,18 @@ export const Projects = () => {
                 id="pills-tab"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="first">Brainbreaker</Nav.Link>
+                  <Nav.Link eventKey="first">PetConnect</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Laravel</Nav.Link>
+                  <Nav.Link eventKey="second">E-Commerce</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Python</Nav.Link>
+                  <Nav.Link eventKey="third">Dashboards</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
                 <Tab.Pane eventKey="first">
-                  <Row>
+                  <Row className="">
                     {projects.map((project, index) => {
                       return <ProjectCards key={index} {...project} />;
                     })}

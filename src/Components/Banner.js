@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = ["Web Developer", "App Designer", "UI/UX Designer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -20,8 +20,8 @@ export const Banner = () => {
   }, [text]);
 
   const tick = () => {
-    let i = loopNum % toRotate.length; //Me dice una palabra al azar
-    let fullText = toRotate[i]; //Designa palabra a animar
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
     let updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
@@ -45,20 +45,20 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container className="data-container">
-        <Row className="align-items-center">
+        <Row>
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my portafolio</span>
+            <p className="tagline">Hi I'm</p>
+            <h1>Josafath Sosa</h1>
             <h1>
-              {"Hi I`m Josafath "} <span className="wrap"> {text}</span>
+              <span className="wrap">Software Developer</span>
             </h1>
-            <p>
-              ¡Welcome to my digital corner! I am a passionate student of
-              Intelligent Computing dedicated to exploring the wonders of
-              technology. I love bringing innovative ideas to life. My skills
-              are not confined to the virtual realm alone; I am adept at
-              designing and managing databases, ensuring a robust structure for
-              my projects. <br></br>
+            <p className="description">
+              I am a passionate student of Intelligent Computing dedicated to
+              exploring the wonders of technology.
             </p>
+            <div className="button">
+              <a href="#">Get in touch</a>
+            </div>
           </Col>
         </Row>
       </Container>
