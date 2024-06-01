@@ -7,6 +7,14 @@ import ra1 from "../assets/img/bb1.PNG";
 import ra2 from "../assets/img/bb2.PNG";
 import ra3 from "../assets/img/bb3.PNG";
 
+import case1 from "../assets/img/case1.PNG";
+import case2 from "../assets/img/case2.PNG";
+import case3 from "../assets/img/case3.PNG";
+
+import wapi from "../assets/img/wapi.PNG";
+import wapi2 from "../assets/img/wapi2.PNG";
+import wapi3 from "../assets/img/wapi3.PNG";
+
 export const Projects = () => {
   const projects = [
     {
@@ -26,6 +34,42 @@ export const Projects = () => {
     },
   ];
 
+  const projects2 = [
+    {
+      title: "Auth",
+      descripcion: "Sign up & sing in",
+      imgUrl: case1,
+    },
+    {
+      title: "UX Desgin",
+      descripcion: "Design & Development",
+      imgUrl: case2,
+    },
+    {
+      title: "Ideas",
+      descripcion: "Brings your to life",
+      imgUrl: case3,
+    },
+  ];
+
+  const projects3 = [
+    {
+      title: "Auth",
+      descripcion: "Sign up & sing in",
+      imgUrl: wapi,
+    },
+    {
+      title: "UX Desgin",
+      descripcion: "Design & Development",
+      imgUrl: wapi2,
+    },
+    {
+      title: "Ideas",
+      descripcion: "Brings your to life",
+      imgUrl: wapi3,
+    },
+  ];
+
   return (
     <section className="project" id="projects">
       <Container>
@@ -40,13 +84,13 @@ export const Projects = () => {
                 id="pills-tab"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="first">PetConnect</Nav.Link>
+                  <Nav.Link eventKey="first">Apps</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="second">E-Commerce</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Dashboards</Nav.Link>
+                  <Nav.Link eventKey="third">Services</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
@@ -59,14 +103,14 @@ export const Projects = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
                   <Row>
-                    {projects.map((project, index) => {
+                    {projects2.map((project, index) => {
                       return <ProjectCards key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <Row>
-                    {projects.map((project, index) => {
+                    {projects3.map((project, index) => {
                       return <ProjectCards key={index} {...project} />;
                     })}
                   </Row>
