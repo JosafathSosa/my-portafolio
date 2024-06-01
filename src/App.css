@@ -200,7 +200,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Banner */
 .banner {
   padding: 100px 0;
-
   height: 100vh;
 }
 
@@ -322,6 +321,70 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .App-link {
   color: #61dafb;
+}
+
+/* Lenguajes */
+
+.info {
+  background-color: rgb(23, 23, 23);
+  padding: 100px 0;
+}
+
+.info .col .imagen {
+  display: none;
+}
+
+.info .col .imagen img {
+  width: 300px;
+  height: 400px;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+
+@media (min-width: 1000px) {
+  .info .col .imagen {
+    display: block;
+  }
+}
+
+.info .aboutMe {
+  text-align: left;
+}
+
+.info .aboutMe .line {
+  width: 250px;
+  border: 1px solid rgb(63, 81, 181);
+}
+
+.info .aboutMe h2 {
+  font-size: 40px;
+  margin-right: 30px;
+  letter-spacing: 0.8px;
+}
+
+.info .aboutMe p {
+  letter-spacing: 0.8px;
+  line-height: 20px;
+}
+
+.info .imagen {
+  display: hidden;
+}
+
+.info .aboutMe ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info .aboutMe ul li {
+  display: flex;
+  gap: 10px;
+}
+
+.info .aboutMe .tec {
+  margin-top: 40px;
+  display: flex;
+  gap: 80px;
 }
 
 /* Skills */

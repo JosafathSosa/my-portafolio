@@ -53,7 +53,7 @@ export const Banner = () => {
               <span className="wrap">Software Developer</span>
             </h1>
             <p className="description">
-              I am a passionate student of Intelligent Computing dedicated to
+              I am a passionate Intelligent Computing Engineer dedicated to
               exploring the wonders of technology.
             </p>
             <div className="button">
