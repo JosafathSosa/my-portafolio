@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "App Designer", "UI/UX Designer"];
+  const toRotate = ["Software Engineer", "Web Developer", "UI/UX Designer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
+  const period = 1000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -17,7 +17,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  }, [text, delta]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -45,22 +45,20 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container className="data-container">
-        <Row>
-          <Col xs={12} md={6} xl={7}>
-            <p className="tagline">Hi I'm</p>
-            <h1>Josafath Sosa</h1>
-            <h1>
-              <span className="wrap">Software Developer</span>
-            </h1>
-            <p className="description">
-              I am a passionate Intelligent Computing Engineer dedicated to
-              exploring the wonders of technology.
-            </p>
-            <div className="button">
-              <a href="#">Get in touch</a>
-            </div>
-          </Col>
-        </Row>
+        <Col xs={12} md={6} xl={7}>
+          <p className="tagline">Hi I'm</p>
+          <h1>Josafath Sosa</h1>
+          <h1>
+            <span className="wrap">{text}</span>
+          </h1>
+          <p className="description">
+            I am a passionate Intelligent Computing Engineer dedicated to
+            exploring the wonders of technology.
+          </p>
+          <div className="button">
+            <p>Get in touch</p>
+          </div>
+        </Col>
       </Container>
     </section>
   );

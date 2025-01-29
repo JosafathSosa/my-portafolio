@@ -112,7 +112,7 @@ export const Lenguajes = () => {
           </Col>
           <Col>
             <div className="imagen">
-              <img src={retrato} />
+              <img src={retrato} alt={`Imagen retrato`}/>
             </div>
           </Col>
         </Row>
