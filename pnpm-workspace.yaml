@@ -1,0 +1,6 @@
+allowBuilds:
+  core-js: false
+  core-js-pure: false
+
+overrides:
+  typescript: 4.9.5

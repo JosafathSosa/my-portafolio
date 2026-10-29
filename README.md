@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Docker
+
+To build the production image and start the portfolio in the background:
+
+```sh
+docker compose up -d --build
+```
+
+Open [http://localhost:3000](http://localhost:3000). To stop the service, run:
+
+```sh
+docker compose down
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

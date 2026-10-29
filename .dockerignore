@@ -1,0 +1,10 @@
+.git
+.gitignore
+.dockerignore
+node_modules
+build
+coverage
+.env
+.env.*
+npm-debug.log*
+pnpm-debug.log*
