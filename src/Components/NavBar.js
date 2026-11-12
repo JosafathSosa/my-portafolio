@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import githubIcon from "../assets/img/github-mark.svg";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -36,28 +37,30 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link
-              href="#home"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-
-            <Nav.Link
-              href="#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
-            </Nav.Link>
+            {[
+              ["home", "Home"],
+              ["about", "About"],
+              ["experience", "Experience"],
+              ["projects", "Projects"],
+            ].map(([key, label]) => (
+              <Nav.Link
+                key={key}
+                href={`#${key}`}
+                className={
+                  activeLink === key ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink(key)}
+              >
+                {label}
+              </Nav.Link>
+            ))}
           </Nav>
           <div className="navbar-text">
             <div className="social-icon">
+              <a href="https://github.com/JosafathSosa" target="_blank" rel="noreferrer">
+                <img src={githubIcon} alt="GitHub" className="gh" />
+              </a>
+
               <a href="https://www.linkedin.com/in/josafath-sosa-jimenez-7970b2267/">
                 <img src={navIcon1} alt="" />
               </a>
@@ -67,9 +70,11 @@ export const NavBar = () => {
               </a>
             </div>
 
-            <button className="vvd">
-              <span>Contact</span>
-            </button>
+            <a href="#contact">
+              <button className="vvd">
+                <span>Contact</span>
+              </button>
+            </a>
           </div>
         </Navbar.Collapse>
       </Container>
