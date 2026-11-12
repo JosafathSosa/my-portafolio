@@ -4,7 +4,7 @@ import { Col, Container } from "react-bootstrap";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Software Engineer", "Web Developer", "UI/UX Designer"];
+  const toRotate = ["Software Engineer", "AI Engineer", "Full-Stack Developer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1000;
@@ -17,7 +17,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text, delta]);
+  }, [text, delta]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -52,11 +52,12 @@ export const Banner = () => {
             <span className="wrap">{text}</span>
           </h1>
           <p className="description">
-            I am a passionate Intelligent Computing Engineer dedicated to
-            exploring the wonders of technology.
+            Software & AI Engineer from Aguascalientes, México. I build web and
+            mobile apps, APIs and machine learning solutions, turning ideas
+            into clean, reliable products.
           </p>
           <div className="button">
-            <p>Get in touch</p>
+            <a href="#contact">Get in touch</a>
           </div>
         </Col>
       </Container>
